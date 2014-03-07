@@ -26,3 +26,5 @@ gulp.task('bower', function() {
 });
 
 gulp.task('build', ['jade', 'bower', 'coffee']);
+
+gulp.task('default', ['build']);
