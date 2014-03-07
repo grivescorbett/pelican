@@ -1,0 +1,42 @@
+cables: {
+	id: "id",
+	number_of_signals: 19,
+	signal_names: [
+		"Kick",
+		"Snare",
+		"Hat",
+		"Lo Tom",
+		"Mid Tom",
+		"Hi Tom"
+	]
+},
+
+connectors: [
+	[
+		id: "id",
+		type: "mult_block",
+		signals_consumed: 19,
+		connected_cable: {
+			id: "id",
+			cable_side: "from"
+		}
+	],
+
+	[
+		id: "id",
+		signals_consumed: 19,
+		connected_cable: {
+			id: "id",
+			cable_side: "to"
+			}
+	]
+],
+
+block_types: [
+	{
+		[
+			name: "mult_block",
+			make: "WireWorks"
+		]
+	}
+]
