@@ -33,6 +33,14 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('dist/css/'));
 })
 
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+  gulp.watch(paths.jade, ['jade']);
+  gulp.watch(paths.scripts, ['scripts']);
+  gulp.watch(paths.sass, ['sass']);
+});
+
+
 gulp.task('build', ['jade', 'bower', 'coffee', 'sass']);
 
 gulp.task('default', ['build']);
