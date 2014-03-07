@@ -6,6 +6,7 @@
     "gulp-jade": "~0.4.2",
     "gulp-coffee": "~1.4.1",
     "gulp-bower": "0.0.3",
-    "gulp-bower-files": "~0.1.11"
+    "gulp-bower-files": "~0.1.11",
+    "gulp-sass": "^0.7.1"
   }
 }

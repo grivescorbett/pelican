@@ -3,10 +3,12 @@ var jade = require('gulp-jade');
 var coffee = require('gulp-coffee');
 var bowerFiles = require('gulp-bower-files');
 var bower = require('gulp-bower');
+var sass = require('gulp-sass')
 
 var paths = {
 	scripts: ['src/coffee/**/*.coffee'],
-	jade: ['src/jade/**/*.jade']
+	jade: ['src/jade/**/*.jade'],
+	sass: ['src/sass/**/*.sass']
 };
 
 gulp.task('jade', function() {
@@ -25,6 +27,12 @@ gulp.task('bower', function() {
 	return bower();
 });
 
-gulp.task('build', ['jade', 'bower', 'coffee']);
+gulp.task('sass', function() {
+	return gulp.src(paths.sass)
+        .pipe(sass())
+        .pipe(gulp.dest('dist/css/'));
+})
+
+gulp.task('build', ['jade', 'bower', 'coffee', 'sass']);
 
 gulp.task('default', ['build']);
