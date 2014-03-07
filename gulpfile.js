@@ -6,7 +6,7 @@ var bower = require('gulp-bower');
 var sass = require('gulp-sass')
 
 var paths = {
-	scripts: ['src/coffee/**/*.coffee'],
+	coffee: ['src/coffee/**/*.coffee'],
 	jade: ['src/jade/**/*.jade'],
 	sass: ['src/sass/**/*.sass']
 };
@@ -18,7 +18,7 @@ gulp.task('jade', function() {
 });
 
 gulp.task('coffee', function() {
-	return gulp.src(paths.scripts)
+	return gulp.src(paths.coffee)
 		.pipe(coffee())
 		.pipe(gulp.dest('dist/js/'));
 });
@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch(paths.jade, ['jade']);
-  gulp.watch(paths.scripts, ['scripts']);
+  gulp.watch(paths.coffee, ['coffee']);
   gulp.watch(paths.sass, ['sass']);
 });
 
