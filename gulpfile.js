@@ -24,7 +24,8 @@ gulp.task('coffee', function() {
 });
 
 gulp.task('bower', function() {
-	return bower();
+	return bower()
+	.pipe(gulp.dest('dist/lib/'));
 });
 
 gulp.task('sass', function() {
