@@ -1,8 +1,12 @@
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+// Bootstrap variable customizations
+@import "custom_bootstrap_variables.sass";
 
-.navbar {
-  margin-bottom: 20px;
-}
+// Overrides of specific bootstrap styles
+@import "bootstrap_overrides.sass";
+
+// Import bootstrap
+@import "../../bower_components/bootstrap-sass/lib/bootstrap.scss";
+
+// Primary stylesheet
+@import "main.scss";
+
