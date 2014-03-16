@@ -3,7 +3,18 @@ html(lang="en")
 	head
 		link(rel="stylesheet" href="/css/style.css")
 		link(rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css")
-	body(ng-app="pelican")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	body(ng-app="pelican").container
+		nav(role="navigation").navbar.navbar-default
+			.container-fluid
+				.navbar-header
+					a(href="#").navbar-brand Test
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li
+							a(href="#").active Dashboard
+						li
+							a(href="#").active Test
 		div(ng-view)
 
 		script(type="text/javascript", src="/lib/angular/angular.min.js")
